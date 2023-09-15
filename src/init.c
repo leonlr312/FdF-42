@@ -72,8 +72,8 @@ t_control	*init_control(void)
 
 void	reset_control(t_fdf *fdf)
 {
-	fdf->control->shift_x = W_WIDTH / 2;
-	fdf->control->shift_y = W_HEIGHT / 2;
+	fdf->control->shift_x = W_HEIGHT / 2;
+	fdf->control->shift_y = W_WIDTH / 2;
 	fdf->control->zoom = 25;
 	fdf->control->zout = 10;
 	fdf->control->color = 0;

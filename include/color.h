@@ -47,7 +47,7 @@
 # define C_BLUEY	0x0492c2
 
 //Macro
-# define W_WIDTH 1260
+# define W_WIDTH 900
 # define W_HEIGHT 600
 # define L_WIDTH 190
 # define W_NAME		"FDF - leoda-lu"

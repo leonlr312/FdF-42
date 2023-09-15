@@ -55,9 +55,9 @@ void	rotate(t_fdf *fdf)
 			fdf->position[y][x]->rx = fdf->position[y][x]->px;
 			fdf->position[y][x]->ry = fdf->position[y][x]->py;
 			fdf->position[y][x]->rz = fdf->position[y][x]->pz;
-			fdf->position[y][x]->rx *= fdf->control->zout;
-			fdf->position[y][x]->ry *= fdf->control->zout;
-			fdf->position[y][x]->rz *= fdf->control->zout / fdf->control->zout;
+			fdf->position[y][x]->rx *= fdf->control->zoom;
+			fdf->position[y][x]->ry *= fdf->control->zoom;
+			fdf->position[y][x]->rz *= fdf->control->zoom / fdf->control->zout;
 			fdf->position[y][x]->rx -= (fdf->width * fdf->control->zoom) / 2;
 			fdf->position[y][x]->ry -= (fdf->height * fdf->control->zoom) / 2;
 			rotate_x(fdf->position[y][x], radian_ang(fdf->control->x_angle));

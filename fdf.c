@@ -59,8 +59,8 @@ int	main(int argc, char *argv[])
 	init_mlx(data, argv[1]);
 	gnl_read(data->fdf, argv[1]);
 	mlx_expose_hook(data->win_ptr, expose_hook, data);
-	mlx_hook(data->win_ptr, KeyPress, KeyPressMask, press_key, data);
-	mlx_hook(data->win_ptr, ButtonPress, ButtonPressMask, press_mouse, data);
+	mlx_key_hook(data->win_ptr, press_key, data);
+	mlx_mouse_hook(data->win_ptr, press_mouse, data);
 	mlx_hook(data->win_ptr, DestroyNotify, NoEventMask, end_program, data);
 	mlx_loop(data->mlx_ptr);
 	return (0);
